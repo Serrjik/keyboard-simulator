@@ -1,7 +1,7 @@
 # keyboard-simulator
 Клавиатурный тренажер
 
-![Клавиатурный тренажер]()
+![Клавиатурный тренажер](https://github.com/Serrjik/keyboard-simulator/blob/master/keyboard-simulator.jpg)
 
 Учебный проект создан во время бесплатного онлайн стрима школы [Webcademy.ru](https://webcademy.ru)
 
