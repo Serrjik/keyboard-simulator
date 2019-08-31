@@ -5,7 +5,7 @@
 
 Учебный проект создан во время бесплатного онлайн стрима школы [Webcademy.ru](https://webcademy.ru)
 
-Ссылка на проект []()
+Ссылка на проект [https://serrjik.github.io/keyboard-simulator/](https://serrjik.github.io/keyboard-simulator/)
 
 ### Примененные технологии в проекте:
 
