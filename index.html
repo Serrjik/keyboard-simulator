@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Клавиатурный тренажер</title>
+	<!-- <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap&subset=cyrillic-ext" rel="stylesheet">
+
+</head>
+<body>
+	
+	<!-- Logo and Results -->
+	<div class="container">
+		<div class="logo">
+			<i class="fas fa-keyboard"></i> Клавиатурный тренажер
+		</div>
+		
+		<!-- Results -->
+		<div class="results ">
+			<div class="results-title">Результаты предыдущей строки:</div>
+			<div class="indicators">
+				<div class="indicator">
+					<div class="indicator__icon">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+					<div class="indicator__name">Символов в минуту: </div>
+					<div class="indicator__value" id="wordsSpeed">-</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator__icon indicator__icon--errors">
+						<i class="fas fa-exclamation-circle"></i>
+					</div>
+					<div class="indicator__name">Ошибок: </div>
+					<div class="indicator__value" id="errorProcent">-</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Results -->
+
+	</div>
+	<!-- // Logo and Results -->
+
+	<div class="divider"></div>
+
+	<div class="container">
+
+		<!-- Input field -->
+		<form action="">
+			<input
+				id="input"
+				type="text"
+				class="input"
+				autocomplete="off"
+				placeholder="Поле для ввода текста" 
+			>
+		</form>
+		<!-- // Input field -->
+
+		<!-- Text -->
+		<!-- <div class="text error"> -->
+		<div class="text" id="textExample">
+			<!-- <div class="line">
+				<span class="done"> На переднем плане, прямо перед</span> 
+				<span class="hint">н</span>ами, расположен был дворик, где стоял
+			</div>
+			<div class="line">
+				наполовину вычищенный автомобиль. Шофер Остин был на этот раз
+			</div>
+			<div class="line">
+				уволен окончательно и бесповоротно. Он раскинулся на земле,
+			</div>
+			<div class="line hidden">
+				и большая черная ссадина на лбу свидетельствовала, по-видимому, о том,
+			</div>
+			<div class="line hidden"> что он при падении ударился головою о подножку или щит.</div> -->
+		</div>
+		<!-- // Text  -->
+		
+		<!-- Keyboard -->
+		<div class="keyboard">
+			<div class="line">
+				<div data-key="ё">Ё</div>
+				<div data-key="1">1</div>
+				<div data-key="2">2</div>
+				<div data-key="3">3</div>
+				<div data-key="4">4</div>
+				<div data-key="5">5</div>
+				<div data-key="6">6</div>
+				<div data-key="7">7</div>
+				<div data-key="8">8</div>
+				<div data-key="9">9</div>
+				<div data-key="0">0</div>
+				<div data-key="-">-</div>
+				<div data-key="+">+</div>
+				<div class="backspace" data-key="backspace">Backspace</div>
+			</div>
+			<div class="line">
+				<div class="tab" data-key="tab">Tab</div>
+				<div data-key="й">Й</div>
+				<div data-key="ц">Ц</div>
+				<div data-key="у">У</div>
+				<div data-key="к">К</div>
+				<div data-key="е">Е</div>
+				<div data-key="н">Н</div>
+				<div data-key="г">Г</div>
+				<div data-key="ш">Ш</div>
+				<div data-key="щ">Щ</div><!--  class="hint" -->
+				<div data-key="з">З</div>
+				<div data-key="х">Х</div>
+				<div data-key="ъ">Ъ</div>
+				<div data-key="backslash">\</div>
+			</div>
+			<div class="line">
+				<div class="caps" data-key="capslock">Caps Lock</div>
+				<div data-key="ф">Ф</div>
+				<div data-key="ы">Ы</div>
+				<div data-key="в">В</div>
+				<div data-key="а">А</div>
+				<div data-key="п">П</div>
+				<div data-key="р">Р</div>
+				<div data-key="о">О</div>
+				<div data-key="л">Л</div>
+				<div data-key="д">Д</div>
+				<div data-key="ж">Ж</div>
+				<div data-key="э">Э</div>
+				<div class="enter" data-key="enter">Enter</div>
+			</div>
+			<div class="line">
+				<div class="shift" data-key="shift">Shift</div>
+				<div data-key="я">Я</div>
+				<div data-key="ч">Ч</div>
+				<div data-key="с">С</div>
+				<div data-key="м">М</div>
+				<div data-key="и">И</div>
+				<div data-key="т">Т</div>
+				<div data-key="ь">Ь</div>
+				<div data-key="б">Б</div>
+				<div data-key="ю">Ю</div>
+				<div data-key=".">. <sup>,</sup></div>
+				<div class="shift" data-key="shift">Shift</div>
+			</div>
+			<div class="line">
+				<div class="space" data-key=" "></div>
+				<div class="alt" data-key="alt">Alt</div>
+			</div>
+		</div>
+		<!-- // Keyboard -->
+	</div>
+
+	<div class="divider"></div>
+	<div class="container">
+		<!-- Copyright -->
+		<div class="copyright">
+			<p>Проект сделал Сергей Григорович в  рамках интенсива по JS в <a href="https://vk.com/webcademy" target="_blank">WebCademy.ru</a></p>
+		</div>
+		<!-- // Copyright -->
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
